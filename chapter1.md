@@ -1,3 +1,4 @@
-# First Chapter
+# 第一章
 
-GitBook allows you to organize your book into chapters, each chapter is stored in a separate file like this one.
+REPL：全称Read-Eval-Print-Loop，是一种交互式解释器环境，Python，Scala等语言具有。
+
