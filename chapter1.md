@@ -19,7 +19,7 @@
 
 ##### 1.3 常用类型
 
-Scala有八种基本类型：Byte、Char、Short、Int、Long、Float、Double、Boolean，与Java不同的是，这些类型是类。
+Scala有八种基本类型：Byte、Char、Short、Int、Long、Float、Double、Boolean。与Java不同的是，这些类型是类。
 
 Scala不可以区分基本类型和引用类，可以自直接对数字执行方法，比如1.toString\(\)。
 
