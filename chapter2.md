@@ -32,8 +32,28 @@ Scala有3种输出形式：
 
 Scala有9种输入形式：
 
-* readLine：
-* readInt, readFloat...：共8种，read+数据类型的形式
+* readLine：可带一个参数，作为提示字符串，用来读入一行字符串。
+* readInt, readFloat...：共8种，命名均为read+数据类型的形式，用来读入其他数据类型。
+
+##### 2.5 循环
+
+Scala的while循环与其他语言一样。
+
+Scala没有类似Java的for循环（初始化变量;变量是否满足条件;更新变量），只有`for (i <- 表达式)`这种结构，如：
+
+```scala
+for (i <- 1 to n) {
+      r = r * i
+    }
+```
+
+`1 to n`会返回一个1到n的Range（包含1与n），循环会遍历这个集合中的每一个值，如果使用`1 until n`则不会包含上限n。
+
+在这里，并没有对i进行var或al的指定，该变量的类型是集合的元素类型。
+
+Scala没有break与continue。
+
+##### 2.6 高级for循环与推导式
 
 
 
