@@ -19,9 +19,9 @@
 
 ##### 1.3 常用类型
 
-Scala有八种基本类型：Byte、Char、Short、Int、Long、Float、Double、Boolean。与Java不同的是，这些类型是类。
+Scala有八种基本类型：`Byte`、`Char`、`Short`、`Int`、`Long`、`Float`、`Double`、`Boolean`。与Java不同的是，这些类型是类。
 
-Scala不刻意区分基本类型和引用类，可以直接对数字执行方法，比如1.toString\(\)。
+Scala不刻意区分基本类型和引用类，可以直接对数字执行方法，比如`1.toString()`。
 
 Scala的编译器会自动转换基本类型与包装类。
 
@@ -47,7 +47,7 @@ Scala在进行+-\*/%等操作符的时候，实际上在调用一个方法，例
 
 ##### 1.6 apply方法
 
-在Scala中，"Hello"\(4\)"将产出o，但实际上是调用了StringOps的apply方法，即等同于"Hello".apply\(4\)；同样的，BigInt\("123456789"\)可以不使用new关键字就创建一个BigInt对象，像这样使用伴生对象的apply方法来构建对象是Scala的常用手法。
+在Scala中，`Hello"(4)`将产出o，但实际上是调用了`StringOps`的`apply`方法，即等同于`"Hello".apply(4)`；同样的，`BigInt("123456789")`可以不使用new关键字就创建一个`BigInt`对象，像这样使用伴生对象的`apply`方法来构建对象是Scala的常用手法。
 
 ---
 
