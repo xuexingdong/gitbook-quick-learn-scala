@@ -67,7 +67,7 @@ Scala没有break与continue。
 
 可以使用任意多的定义，引入可以在循环中使用的变量。
 
-`for (i <- 1 to 3; from = 4 - i; j <- from to 3) print((10 * i + j) + " ")`
+`for (i <- 1 to 3; from = 4 - i; j <- from to 3) print((10 * i + j) + " ")`
 
 ##### 2.7 函数
 
