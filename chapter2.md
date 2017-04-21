@@ -57,7 +57,7 @@ Scala没有break与continue。
 
 可以用**变量&lt;-表达式**的形式生成多个生成器，用分号隔开。如：
 
-`for (i <- 1 to 3; j <- 1 to 3) print((10 * i + j) + " ")`
+`for (i <- 1 to 3; j <- 1 to 3) print((10 * i + j) + " ")`
 
 每个生成器都可以带一个**守卫**，以if开头的Boolean表达式：
 
@@ -65,11 +65,11 @@ Scala没有break与continue。
 
 注意if之前没有分号。
 
+可以使用任意多的定义，引入可以在循环中使用的变量。
 
+`for (i <- 1 to 3; from = 4 - i; j <- from to 3) print((10 * i + j) + " ")`
 
 ##### 2.7 函数
-
-
 
 
 
