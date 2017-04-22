@@ -165,7 +165,9 @@ def addAndPrint(a: Int, b: Int) {
 
 ##### 2.10 懒值
 
-的
+当val被声明为`lazy`时，它的初始化将被推迟，直到我们首次对它取值（类似于Python中generator的效果）。
 
+`lazy val words = scala.io.Source.fromFile("/usr/share/dict/words").mkString`
 
+如果程序从不访问`words`，那么文件也不会被打开，这个特性对于一些开销大的初始化语句很有用。
 
