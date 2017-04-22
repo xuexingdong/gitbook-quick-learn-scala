@@ -121,3 +121,43 @@ for {i <- 1 to 3
 
 `decorate(left = "<<<", str = "Hello", right = ">>>")`
 
+---
+
+##### 2.9 变长参数
+
+类似于Java中的`...`与Python中的`*args`，Scala的函数也可以接收一个变长参数。
+
+```scala
+def sum(args: Int*) = {
+    var result = 0
+    for (arg <- args) result += arg
+    result
+  }
+```
+
+调用的方法如下：
+
+`sum(1, 2, 3, 4, 5)`
+
+你可能想传入一个范围的值，但事实上是错误的。
+
+`sum(1 to 5)`
+
+在接收单个参数时，会把参数当做`Int`处理，正确的做法是，追加`_*`符号，让编译器知道该参数是一个参数序列：
+
+`sum(1 to 5: _*)`
+
+---
+
+##### 2.10 过程
+
+对于没有返回值的函数，Scala称之为过程，在表达上，仅仅是略去了函数体之前的=号。
+
+```scala
+def addAndPrint(a: Int, b: Int) {
+    print(a + b)
+  }
+```
+
+如果执行`val a = addAndPrint(1, 2)`并打印， 你会发现`a`是一个`Unit`值，打印的结果是`()`。
+
