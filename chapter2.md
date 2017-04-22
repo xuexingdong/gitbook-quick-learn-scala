@@ -111,7 +111,13 @@ for {i <- 1 to 3
 
 ##### 2.8 默认参数和带名参数
 
+在Scala中，一个含有默认参数的函数是这样写的：
 
+`def decorate(str: String, left: String = "[", right: String = "]") = left + str + right`
 
+如果参数数量不够，默认参数会**从后往前**的被对应，这一点与其他编程语言很不一样。
 
+和Python一样，你也可以在提供参数的时候指定参数名，带名参数可以是任意的顺序。
+
+`decorate(left = "<<<", str = "Hello", right = ">>>")`
 
