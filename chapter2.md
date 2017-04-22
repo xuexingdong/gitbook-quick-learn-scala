@@ -161,3 +161,11 @@ def addAndPrint(a: Int, b: Int) {
 
 如果执行`val a = addAndPrint(1, 2)`并打印， 你会发现`a`是一个`Unit`值，打印的结果是`()`。
 
+---
+
+##### 2.10 懒值
+
+的
+
+
+
