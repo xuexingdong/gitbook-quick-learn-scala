@@ -163,11 +163,32 @@ def addAndPrint(a: Int, b: Int) {
 
 ---
 
-##### 2.10 懒值
+##### 2.11 懒值
 
 当val被声明为`lazy`时，它的初始化将被推迟，直到我们首次对它取值（类似于Python中generator的效果）。
 
 `lazy val words = scala.io.Source.fromFile("/usr/share/dict/words").mkString`
 
 如果程序从不访问`words`，那么文件也不会被打开，这个特性对于一些开销大的初始化语句很有用。
+
+---
+
+##### 2.12 异常
+
+Scala没有受检异常。
+
+`throw`表达式有特殊的类型`Nothing`，在if/else表达式中，如果一个分支的类型是Nothing，那么表达式的类型就是另一个分支的类型。
+
+捕获错误采用**模式匹配**的语法：
+
+```scala
+try {
+      process(new URL("http://horstmann.com/fred-tiny.gif"))
+    } catch {
+      case _: MalformedURLException => println("Bad URL: " + url)
+      case ex: IOException => ex.printStackTrace()
+    }
+```
+
+如果你不需要使用捕获的异常对象，可以使用`_`来代替变量名。
 
