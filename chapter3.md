@@ -108,7 +108,35 @@ val result = for (elem <- a if elem % 2 == 0) yield 2 * elem
 
 ##### 3.5 常用算法
 
+在程序中，最常用的运算是求和与排序，Scala有内建的函数来处理这些任务。
 
+`Array(1, 7, 2, 9).sum`，要使用`sum`算法，元素类型必须是数值类型，包括整型，浮点型和`BigInteger/BigDecimal`。
 
+`min`与`max`输出数组或数组缓冲中的最小/最大值。
 
+`sorted`方法将数组或数组缓冲排序，并返回新的集合。
+
+```scala
+val b = ArrayBuffer(1, 7, 2, 9)
+val bSorted = b.sorted(_ < _)
+```
+
+也可以直接对数组排序，但不能的对数组缓冲进行排序：
+
+```scala
+val a = Array(1, 7, 2, 9)
+//    a被修改
+scala.util.Sorting.quickSort(a)
+```
+
+如果想要显示数组或数组缓冲的内容，使用`mkString`法方法。
+
+```scala
+//    指定拼接符
+a.mkString(" and ")
+//    指定前后缀以及拼接符
+a.mkString("<", ",", ">")
+```
+
+`Array.toString`打印的是Java对象，`ArrayBuffer.toString`打印的是便于调试的显示值。
 
