@@ -183,11 +183,11 @@ Scala没有受检异常。
 
 ```scala
 try {
-      process(new URL("http://horstmann.com/fred-tiny.gif"))
-    } catch {
-      case _: MalformedURLException => println("Bad URL: " + url)
-      case ex: IOException => ex.printStackTrace()
-    }
+  process(new URL("http://horstmann.com/fred-tiny.gif"))
+} catch {
+  case _: MalformedURLException => println("Bad URL: " + url)
+  case ex: IOException => ex.printStackTrace()
+}
 ```
 
 如果你不需要使用捕获的异常对象，可以使用`_`来代替变量名。
