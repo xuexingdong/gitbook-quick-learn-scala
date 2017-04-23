@@ -150,7 +150,17 @@ a.mkString("<", ",", ">")
 
 ##### 3.7 多维数组
 
+与Java一样，多维数组是通过数组的数组来实现的，例如：`Double`类型的二维数组为`Array[Array[Double]]`，要构造这样的数组，可以使用`ofDim`方法：
 
+`val matrix = Array.ofDim[Double](3, 4)`
+
+要访问其中的对象，使用两对括号：
+
+`matrix(row)(column) = 42`
+
+---
+
+##### 3.8 与Java的互操作
 
 
 
