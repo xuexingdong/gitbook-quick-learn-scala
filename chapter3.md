@@ -93,5 +93,22 @@ for (i <- 0 until a.length) {
 
 ##### 3.4 数组转换
 
+for...yield循环可以创建一个类型与原始集合相同的新集合，例如希望对数组中的偶数翻倍并去掉奇数：
+
+```scala
+val a = Array(2, 3, 5, 7, 11)
+val result = for (elem <- a if elem % 2 == 0) yield 2 * elem
+```
+
+但其实更加符合Scala程序员做法的是以下形式：
+
+`a.filter(_ % 2 == 0).map(2 * _)`
+
+---
+
+##### 3.5 常用算法
+
+
+
 
 
