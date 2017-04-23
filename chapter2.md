@@ -51,8 +51,8 @@ Scala没有类似Java的for循环（初始化变量;变量是否满足条件;更
 
 ```scala
 for (i <- 1 to n) {
-      r = r * i
-    }
+    r = r * i
+}
 ```
 
 `1 to n`会返回一个1到n的`Range`（包含1与n），循环会遍历这个集合中的每一个值，如果使用`1 until n`则不会包含上限n。
@@ -83,10 +83,10 @@ Scala没有`break`与`continue`。
 
 ```scala
 for {i <- 1 to 3
-         from = 4 - i
-         j <- from to 3} {
-      print((10 * i + j) + " ")
-    }
+     from = 4 - i
+     j <- from to 3} {
+  print((10 * i + j) + " ")
+}
 ```
 
 如果for循环的循环体以`yield`开始，则该循环会构造出一个集合，每次迭代生成集合中的一个值。

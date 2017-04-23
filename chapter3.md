@@ -57,5 +57,13 @@
 
 ##### 3.3 遍历数组和数组缓冲
 
+数组和
+
+```scala
+  for (i <- 0 util a.length) {
+    println(a(i))
+  }
+```
+
 
 

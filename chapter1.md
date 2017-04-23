@@ -11,8 +11,8 @@
 ##### 1.2 声明值和变量
 
 ```scala
-    val x, y = 100
-    var greeting, message: String = null
+val x, y = 100
+var greeting, message: String = null
 ```
 
 ---
