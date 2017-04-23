@@ -164,6 +164,8 @@ a.mkString("<", ",", ">")
 
 使用Scala的隐式转换，你可以使用Scala的Buffer类型，在调用Java方法时，自动转换成Java的List。
 
+Scala调用Java：
+
 ```scala
 import scala.collection.JavaConversions.bufferAsJavaList
 import scala.collection.mutable.ArrayBuffer
@@ -171,6 +173,15 @@ import scala.collection.mutable.ArrayBuffer
 val command = ArrayBuffer("ls", "-al", "/home/cay")
 //    Scala到Java的转换
 val pb = new ProcessBuilder(command)
+```
+
+Java调用Scala：
+
+```scala
+import scala.collection.JavaConversions.asScalaBuffer
+import scala.collection.mutable.Buffer
+//    不能使用ArrayBuffer，仅能保证是个Buffer
+val cmd: Buffer[String] = pb.command()
 ```
 
 
