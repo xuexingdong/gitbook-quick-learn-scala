@@ -93,7 +93,7 @@ for (i <- 0 until a.length) {
 
 ##### 3.4 数组转换
 
-for...yield循环可以创建一个类型与原始集合相同的新集合，例如希望对数组中的偶数翻倍并去掉奇数：
+`for...yield`循环可以创建一个类型与原始集合相同的新集合，例如希望对数组中的偶数翻倍并去掉奇数：
 
 ```scala
 val a = Array(2, 3, 5, 7, 11)
@@ -161,6 +161,17 @@ a.mkString("<", ",", ">")
 ---
 
 ##### 3.8 与Java的互操作
+
+使用Scala的隐式转换，你可以使用Scala的Buffer类型，在调用Java方法时，自动转换成Java的List。
+
+```scala
+import scala.collection.JavaConversions.bufferAsJavaList
+import scala.collection.mutable.ArrayBuffer
+
+val command = ArrayBuffer("ls", "-al", "/home/cay")
+//    Scala到Java的转换
+val pb = new ProcessBuilder(command)
+```
 
 
 
