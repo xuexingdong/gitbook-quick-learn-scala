@@ -110,7 +110,7 @@ val result = for (elem <- a if elem % 2 == 0) yield 2 * elem
 
 在程序中，最常用的运算是求和与排序，Scala有内建的函数来处理这些任务。
 
-`Array(1, 7, 2, 9).sum`，要使用`sum`算法，元素类型必须是数值类型，包括整型，浮点型和`BigInteger/BigDecimal`。
+`Array(1, 7, 2, 9).sum`对数组或数组缓冲进行求和。要使用`sum`算法，元素类型必须是数值类型，包括整型，浮点型和`BigInteger/BigDecimal`。
 
 `min`与`max`输出数组或数组缓冲中的最小/最大值。
 
@@ -139,4 +139,18 @@ a.mkString("<", ",", ">")
 ```
 
 `Array.toString`打印的是Java对象，`ArrayBuffer.toString`打印的是便于调试的显示值。
+
+---
+
+##### 3.6 解读Scaladoc
+
+对`Array`进行操作时，数组被转换成`ArrayOps`对象，该对象有许多有用的方法，在此省略。
+
+---
+
+##### 3.7 多维数组
+
+
+
+
 
