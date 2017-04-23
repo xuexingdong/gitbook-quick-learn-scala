@@ -51,7 +51,7 @@ Scala没有类似Java的for循环（初始化变量;变量是否满足条件;更
 
 ```scala
 for (i <- 1 to n) {
-    r = r * i
+  r = r * i
 }
 ```
 
@@ -129,10 +129,10 @@ for {i <- 1 to 3
 
 ```scala
 def sum(args: Int*) = {
-    var result = 0
-    for (arg <- args) result += arg
-    result
-  }
+  var result = 0
+  for (arg <- args) result += arg
+  result
+}
 ```
 
 调用的方法如下：
@@ -155,8 +155,8 @@ def sum(args: Int*) = {
 
 ```scala
 def addAndPrint(a: Int, b: Int) {
-    print(a + b)
-  }
+  print(a + b)
+}
 ```
 
 如果执行`val a = addAndPrint(1, 2)`并打印， 你会发现`a`是一个`Unit`值，打印的结果是`()`。
