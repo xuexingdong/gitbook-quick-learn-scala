@@ -5,4 +5,5 @@
 * [第2章 控制结构和函数](chapter2.md)
 * [第3章 数组相关操作](chapter3.md)
 * [第4章 映射和元组](chapter4.md)
+* [第5章 类](di-4-zhang-ying-she-he-yuan-zu.md)
 
