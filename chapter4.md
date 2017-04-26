@@ -68,7 +68,27 @@ scores = scores - "Alice"
 
 ##### 4.4 迭代映射
 
+可以通过`for ((k, v) <- 映射)`来遍历映射。
 
+如果只需要访问键或值，可以使用`scores.keySet`或`scores.values`。
+
+反转映射的快速方法：`for ((k, v) <- 映射) yield (v, k)`
+
+---
+
+##### 4.5 已排序映射
+
+Scala的映射实现方式有2种---哈希表与平衡树，默认是哈希表。Scala没有可变的树形映射，如果需要按一定顺序访问所有的键，可以使用`SortedMap`。
+
+`val scores = scala.collection.immutable.SortedMap("Alice" -> 10, "Fred" -> 7, "Bob" -> 3, "Cindy" -> 8)`
+
+如果你需要可变的树形映射，可以使用Java的`TreeMap`。
+
+如果想要按照插入顺序来访问所有键，使用`LinkedHashMap`：
+
+`val scores = scala.collection.immutable.LinkedHashMap("January" -> 1, "February" -> 2, "March" -> 3, ...)`
+
+---
 
 
 
