@@ -1,7 +1,5 @@
 # 第1章 基础
 
-
-
 ##### 1.1 REPL
 
 全称Read-Eval-Print-Loop，是一种交互式解释器环境，Node.js、Python、Scala等语言都具有这个方便的特性。
