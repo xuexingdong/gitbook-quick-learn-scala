@@ -67,5 +67,5 @@ Scala在进行+-\*/%等操作符的时候，实际上在调用一个方法，例
 
 ##### 1.7 Scaladoc
 
-这一节讲的内容有点碎，讲解了许多之后章节可能会涉及到的知识点，而且Scala的官方API也不是经常阅读，所以忽略。
+可以前往`http://www.scala-lang.org/api/current/`浏览Scala的在线API文档。
 
