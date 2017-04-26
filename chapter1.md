@@ -10,8 +10,16 @@
 
 ##### 1.2 声明值和变量
 
+在Scala中，`val`关键字用来声明常量，`var`关键字用来声明变量。
+
+可以同时声明多个变量。
+
+可以不指定变量的类型。
+
 ```scala
+// 不指定类型
 val x, y = 100
+// 指定类型
 var greeting, message: String = null
 ```
 
@@ -19,7 +27,9 @@ var greeting, message: String = null
 
 ##### 1.3 常用类型
 
-Scala有八种基本类型：`Byte`、`Char`、`Short`、`Int`、`Long`、`Float`、`Double`、`Boolean`。与Java不同的是，这些类型是类。
+Scala有八种基本类型：`Byte`、`Char`、`Short`、`Int`、`Long`、`Float`、`Double`、`Boolean`。
+
+与Java不同的是，这些类型是类。
 
 Scala不刻意区分基本类型和引用类，可以直接对数字执行方法，比如`1.toString()`。
 
