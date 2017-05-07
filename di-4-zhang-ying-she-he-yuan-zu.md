@@ -26,7 +26,35 @@ Scala建议的编码吗风格是：对于**改值器**方法，使用`()`；对�
 
 ##### 5.2 带getter和setter的属性
 
-在Java中，我们不鼓励使用公有字段，而通过`getter`和`setter`去
+在Java中，我们不鼓励使用公有字段，而通过`getter`和`setter`去修改属性
+
+```scala
+class Person {
+  var age = 0
+}
+```
+
+Scala会针对每个字段生成`getter`与`setter`，分别叫`age`和`age_=`。
+
+如果
+
+```scala
+class Person {
+  private var privateAge = 0
+
+  def age = privateAge
+
+  def age_=(newValue: Int) {
+    if (newValue > privateAge) privateAge = newValue
+  }
+}
+```
+
+总结一下，Scala的`gett`与`setter`具有以下规律，
+
+* 如果字段是私有的，则`getter`与`setter`也是私有的。
+* 如果字段是`val`，则只有`getter`被生成。
+* 如果不需要任何`getter`或`setter`，可以将字段声明为`private[this]`。
 
 
 
