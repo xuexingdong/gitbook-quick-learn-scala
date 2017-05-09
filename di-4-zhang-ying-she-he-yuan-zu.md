@@ -34,9 +34,9 @@ class Person {
 }
 ```
 
-Scala会针对每个字段生成`getter`与`setter`，分别叫`age`和`age_=`。
+Scala会针对每个字段生成`getter`与`setter`，对于`age`字段来说，分别叫`age`和`age_=`。
 
-如果
+如果我们事先知道了这两个方法名，可以选择覆盖他。
 
 ```scala
 class Person {
