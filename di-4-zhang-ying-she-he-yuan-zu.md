@@ -36,7 +36,7 @@ class Person {
 
 对于`age`字段来说，生成的`getter`与`setter`方法分别叫`age`和`age_=`。
 
-如果我们事先知道了这两个方法名，可以选择覆盖：
+知道了命名规则以后，我们可以选择覆盖`getter`与`setter`：
 
 ```scala
 class Person {
