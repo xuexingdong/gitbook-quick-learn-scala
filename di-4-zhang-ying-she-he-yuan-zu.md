@@ -60,7 +60,32 @@ class Person {
 
 ##### 5.3 只带getter的属性
 
-如果需要一个只读属性，可以使用`val`字段。
+如果需要一个只读属性，可以使用`val`字段，这样对象在构建完成以后这个属性值就不会再被改变。
+
+有时，我们不希望使用者随意更改某个值，但可以通过其他方式改变。如下：
+
+```scala
+class Counter {
+  private var value = 0
+
+  def increment() {
+    value += 1
+  }
+
+  def current = value
+}
+```
+
+`Counter`的`current`属性在调用`increment`时更新，但没有对应的`setter`。
+
+总结一下，在实现属性时有四种情况：
+
+1. `var foo`：Scala自动合成一个`getter`和`setter`。
+2. `val foo`：Scala自动合成一个`getter`。
+3. 自定义`foo`和`foo_=`方法。
+4. 自定义`foo`方法。
+
+> 可以看出，Scala不支持只有`setter`而没有`getter`的属性。
 
 ---
 
