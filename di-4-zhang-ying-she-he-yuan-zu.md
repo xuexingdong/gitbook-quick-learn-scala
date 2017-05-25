@@ -91,5 +91,33 @@ class Counter {
 
 ##### 5.4 对象私有字段
 
+在Scala中，方法可以访问一个类的所有对象的私有字段，如：
+
+```scala
+class Counter {
+  private var value = 0
+
+  def increment() {
+    value += 1
+  }
+
+  def current = value
+
+  def isLess(other: Counter) = value < other.value
+}
+```
+
+other也是Counter对象，所以可以被访问到，如果想制定更严格的访问控制，可以采用如下语句：
+
+`private[this] var value = 0`的，
+
+这样一来，Counter类的对象只能访问当前对象的value字段，这样的访问被称为**对象私有**。
+
+---
+
+##### 5.5 Bean属性
+
+
+
 
 
