@@ -14,15 +14,13 @@
 * 可以不指定变量的类型，在初始化的时候会进行推断：`val x, y = 100`
 * 也可以手动指定变量类型：`var greeting, message: String =  ""`
 
-
-
 ---
 
 ##### 1.3 常用类型
 
 Scala有八种基本类型：`Byte`、`Char`、`Short`、`Int`、`Long`、`Float`、`Double`、`Boolean`。
 
-与Java不同的是，这些类型是类。
+> 与Java有所不同的是，这些类型是真正意义上的类。
 
 Scala不刻意区分基本类型和引用类，可以直接对数字执行方法，比如`1.toString()`。
 
