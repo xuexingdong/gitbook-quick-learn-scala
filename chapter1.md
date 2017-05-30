@@ -10,16 +10,11 @@
 
 在Scala中，`val`关键字用来声明常量，`var`关键字用来声明变量。
 
-可以同时声明多个变量。
+* 可以同时声明多个变量：`val x, y`
+* 可以不指定变量的类型，在初始化的时候会进行推断：`val x, y = 100`
+* 也可以手动指定变量类型：`var greeting, message: String =  ""`
 
-可以不指定变量的类型。
 
-```scala
-// 不指定类型
-val x, y = 100
-// 指定类型
-var greeting, message: String = null
-```
 
 ---
 
