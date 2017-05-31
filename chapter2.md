@@ -175,7 +175,7 @@ def addAndPrint(a: Int, b: Int) {
 
 Scala没有受检异常。
 
-`throw`表达式有特殊的类型`Nothing`，在if/else表达式中，如果一个分支的类型是Nothing，那么表达式的类型就是另一个分支的类型。
+`throw`表达式有特殊的类型`Nothing`，在if/else表达式中，如果一个分支的类型是`Nothing`，那么表达式的类型就是另一个分支的类型。
 
 捕获错误采用**模式匹配**的语法：
 
